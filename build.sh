@@ -154,6 +154,9 @@ ZIP=ZPX-Inferno-$z-Mido-Nougat-$DATE.zip;
 if [ -f $KERNELPATH/$ZIMAGE ]; then
 echo "Create Flashable zip Anykernel2";
 cp -f $KERNELPATH/$ZIMAGE $ANYKERNEL/anykernel/$ZIMAGE;
+mkdir -p $ANYKERNEL/anykernel/modules/pronto
+cp drivers/staging/prima/wlan.ko $ANYKERNEL/anykernel/modules/pronto/pronto_wlan.ko
+cp $ANYKERNEL/anykernel/modules/pronto/pronto_wlan.ko $ANYKERNEL/anykernel/modules/wlan.ko
 cd $ANYKERNEL/;
 zip -qr9 $ZIP .;
 cd ../..;
