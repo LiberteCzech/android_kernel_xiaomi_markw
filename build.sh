@@ -148,7 +148,7 @@ echo "generating changelog . . .";
 git --no-pager log --pretty=oneline --abbrev-commit 1ded9a48..HEAD > $AROMA/changelog.txt
 
 #ubah nama device masing-masing (ido)
-ZIP=ZPX-Inferno-$z-Mido-Nougat-$DATE.zip;
+ZIP=ZPX-Inferno-$z-Mido_MIUI_Nougat-$DATE.zip;
 
 # Create flashable zip
 if [ -f $KERNELPATH/$ZIMAGE ]; then
@@ -156,7 +156,6 @@ echo "Create Flashable zip Anykernel2";
 cp -f $KERNELPATH/$ZIMAGE $ANYKERNEL/anykernel/$ZIMAGE;
 mkdir -p $ANYKERNEL/anykernel/modules/pronto
 cp drivers/staging/prima/wlan.ko $ANYKERNEL/anykernel/modules/pronto/pronto_wlan.ko
-cp $ANYKERNEL/anykernel/modules/pronto/pronto_wlan.ko $ANYKERNEL/anykernel/modules/wlan.ko
 cd $ANYKERNEL/;
 zip -qr9 $ZIP .;
 cd ../..;
