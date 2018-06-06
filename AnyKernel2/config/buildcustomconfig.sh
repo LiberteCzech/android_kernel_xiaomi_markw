@@ -143,7 +143,7 @@ elif [ $misc = 7 ]; then
 echo " # Check panel_name" >> /tmp/anykernel/patch/init.qcom.post_boot.sh
 echo " panel_model = \`cat /sys/class/graphics/fb0/msm_fb_panel_info | grep panel_name\`" >> /tmp/anykernel/patch/init.qcom.post_boot.sh
 echo " default_color = \`getprop vendor.display.enable_default_color_mode\`" >> /tmp/anykernel/patch/init.qcom.post_boot.sh
-echo " if [ \"$"panel_model"\" == \"panel_name=nt35596 tianma fhd video mode dsi panel\" ]; then" >> /tmp/anykernel/patch/init.qcom.post_boot.sh
+echo " if [ \"$"panel_model"\" == \"panel_name=nt35596 ebbg 1080p video mode dsi panel\" ]; then" >> /tmp/anykernel/patch/init.qcom.post_boot.sh
 echo " 	if [ \"$"default_color"\" == \"1\"]; then" >> /tmp/anykernel/patch/init.qcom.post_boot.sh
 echo " 		setprop vendor.display.enable_default_color_mode 0" >> /tmp/anykernel/patch/init.qcom.post_boot.sh
 echo " 	fi" >> /tmp/anykernel/patch/init.qcom.post_boot.sh

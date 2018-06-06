@@ -37,14 +37,14 @@ CONFIG_DIR=$KERNEL_DIR/arch/arm64/configs
 AROMA=$ZIP_DIR/META-INF/com/google/android/aroma/changelog.txt
 
 #export
-export KBUILD_BUILD_USER="Cangkuls"
-export KBUILD_BUILD_HOST="ZeroProjectX"
-export CROSS_COMPILE="$(command -v ccache) /root/aarch64-linux-android-4.9/bin/aarch64-linux-android-"
+export KBUILD_BUILD_USER="SonicBSV"
+export KBUILD_BUILD_HOST="RUS"
+export CROSS_COMPILE=~/mykernel/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 export ARCH=arm64
 export SUBARCH=arm64
 
 #misc
-CONFIG=inferno_defconfig
+CONFIG=markw_defconfig
 THREAD="-j$(grep -c ^processor /proc/cpuinfo)"
 
 #main script
@@ -119,12 +119,8 @@ if [ "$choice" == "4" ]; then
   make clean &>/dev/null
   git --no-pager log --pretty=format:"%s" --abbrev-commit 51dc95a1..HEAD > $AROMA
   cp $KERN_IMG $ZIP_DIR/anykernel
-  mkdir $ZIP_DIR/anykernel/treble-supported
-  mkdir $ZIP_DIR/anykernel/treble-unsupported
-  cp $DTB1 $ZIP_DIR/anykernel/treble-unsupported/msm8953-qrd-sku3-mido.dtb
-  cp $DTB2 $ZIP_DIR/anykernel/treble-supported/msm8953-qrd-sku3-mido.dtb
   make &>/dev/null
-  cp $ZIP_DIR/*.zip* ~/mido/
+  cp $ZIP_DIR/*.zip* ~/markw/
   make clean &>/dev/null
   cd ..
   echo -e "$purple(i)Flashable zip generated under $ZIP_DIR.$nc"
