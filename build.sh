@@ -39,7 +39,7 @@ AROMA=$ZIP_DIR/META-INF/com/google/android/aroma/changelog.txt
 #export
 export KBUILD_BUILD_USER="SonicBSV"
 export KBUILD_BUILD_HOST="RUS"
-export CROSS_COMPILE=~/mykernel/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+export CROSS_COMPILE=~/mykernel/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linaro-7.2-android-8.1/bin/aarch64-linux-gnu-
 export ARCH=arm64
 export SUBARCH=arm64
 
