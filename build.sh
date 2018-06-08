@@ -30,8 +30,6 @@ nc='\033[0m'
 #directories
 KERNEL_DIR=$PWD
 KERN_IMG=$KERNEL_DIR/out/arch/arm64/boot/Image.gz
-DTB1=$KERNEL_DIR/out/arch/arm64/boot/dts/qcom/msm8953-qrd-sku3-mido-nontreble.dtb
-DTB2=$KERNEL_DIR/out/arch/arm64/boot/dts/qcom/msm8953-qrd-sku3-mido-treble.dtb
 ZIP_DIR=$KERNEL_DIR/AnyKernel2
 CONFIG_DIR=$KERNEL_DIR/arch/arm64/configs
 AROMA=$ZIP_DIR/META-INF/com/google/android/aroma/changelog.txt
@@ -39,7 +37,8 @@ AROMA=$ZIP_DIR/META-INF/com/google/android/aroma/changelog.txt
 #export
 export KBUILD_BUILD_USER="SonicBSV"
 export KBUILD_BUILD_HOST="RUS"
-export CROSS_COMPILE=~/mykernel/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linaro-7.2-android-8.1/bin/aarch64-linux-gnu-
+export CROSS_COMPILE=~/mykernel/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+export СС=~/mykernel/clang-4053586/bin/clang
 export ARCH=arm64
 export SUBARCH=arm64
 
