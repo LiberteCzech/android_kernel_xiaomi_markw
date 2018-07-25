@@ -25,7 +25,7 @@ White='\e[0;37m'        # White
 
 
 echo -e "$White***********************************************"
-echo "         Compiling ElectraBlue Kernel             "
+echo "         Compiling RedStar Kernel             "
 echo -e "***********************************************$nocol"
 
 LC_ALL=C date +%Y-%m-%d
@@ -33,20 +33,20 @@ kernel_dir=$PWD
 build=$kernel_dir/out
 export ARCH=arm64
 export SUBARCH=arm64
-export CROSS_COMPILE="/home/vipul/kernels/toolchains/aarch64-linux-android/bin/aarch64-opt-linux-android-"
-kernel="ElectraBlue"
-version="12.1"
+export CROSS_COMPILE="/home/sonic/kernels/toolchains/aarch64-linux-android/bin/aarch64-opt-linux-android-"
+kernel="RedStar"
+version="1.0"
 vendor="xiaomi"
 android="TREBLE"
-device="mido"
+device="markw"
 zip=zip
 date=`date +"%Y%m%d-%H%M"`
-config=mido_defconfig
+config=markw_defconfig
 kerneltype="Image.gz-dtb"
 jobcount="-j$(grep -c ^processor /proc/cpuinfo)"
 zip_name="$kernel"-"$version"-"$date"-"$android"-"$device".zip
-export KBUILD_BUILD_USER=vipul
-export KBUILD_BUILD_HOST=lordarcadius
+export KBUILD_BUILD_USER=SonicBSV
+export KBUILD_BUILD_HOST=RUS
 
 echo "Checking for build..."
 if [ -d arch/arm64/boot/"$kerneltype" ]; then

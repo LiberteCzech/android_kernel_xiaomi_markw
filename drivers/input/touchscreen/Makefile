@@ -101,8 +101,6 @@ obj-$(CONFIG_TOUCHSCREEN_GT9XX)		+= gt9xx/
 endif
 obj-$(CONFIG_TOUCHSCREEN_FTS)		+= ft8716/
 obj-$(CONFIG_TOUCHSCREEN_TD4310)    += td4310/
-<<<<<<< HEAD
 obj-$(CONFIG_TOUCHSCREEN_HIMAX_CHIPSET)	+= hxchipset/
-=======
 obj-$(CONFIG_TOUCHSCREEN_STATE_NOTIFIER) += state_notifier.o
->>>>>>> 85bd4a0... add Xiaomi Redmi 4 Prime (Markw) compatibility
+

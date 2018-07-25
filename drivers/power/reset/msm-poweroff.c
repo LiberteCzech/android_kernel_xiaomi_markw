@@ -351,15 +351,13 @@ static void msm_restart_prepare(const char *cmd)
 			if (!ret)
 				__raw_writel(0x6f656d00 | (code & 0xff),
 					     restart_reason);
-<<<<<<< HEAD
+
 		} else if (!strncmp(cmd, "edl", 3)) {
-=======
 #ifdef CONFIG_MACH_XIAOMI_MARKW
 		} else if (!strncmp(cmd, "edl", 3) && !device_locked_flag) {
 #else
 		} else if (!strncmp(cmd, "edl", 3)) {
 #endif
->>>>>>> 85bd4a0... add Xiaomi Redmi 4 Prime (Markw) compatibility
 			enable_emergency_dload_mode();
 		} else {
 			__raw_writel(0x77665501, restart_reason);
