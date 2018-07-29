@@ -17941,8 +17941,6 @@ void wlan_hdd_tsf_init(hdd_adapter_t *adapter)
 
 #endif
 
-<<<<<<< HEAD
-=======
 bool hdd_is_memdump_supported(void)
 {
 #ifdef WLAN_FEATURE_MEMDUMP
@@ -17973,7 +17971,6 @@ bool hdd_is_cli_iface_up(hdd_context_t *hdd_ctx)
 	return false;
 }
 
->>>>>>> 7b73f57... prima: CAF TAG 'LA.UM.6.6.r1-09200-89xx.0'
 //Register the module init/exit functions
 module_init(hdd_module_init);
 module_exit(hdd_module_exit);
@@ -17982,26 +17979,8 @@ MODULE_LICENSE("Dual BSD/GPL");
 MODULE_AUTHOR("Qualcomm Atheros, Inc.");
 MODULE_DESCRIPTION("WLAN HOST DEVICE DRIVER");
 
-<<<<<<< HEAD
 module_param_call(con_mode, con_mode_handler, param_get_int, &con_mode,
-=======
-static const struct kernel_param_ops con_mode_ops = {
-	.set = con_mode_handler,
-	.get = param_get_int,
-};
-
-static const struct kernel_param_ops fwpath_ops = {
-	.set = fwpath_changed_handler,
-	.get = param_get_string,
-};
-
-#ifdef MODULE
-module_param(con_mode, int, 0);
-#else
-module_param_cb(con_mode, &con_mode_ops, &con_mode,
->>>>>>> 7b73f57... prima: CAF TAG 'LA.UM.6.6.r1-09200-89xx.0'
                     S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
-#endif
 
 module_param_call(fwpath, fwpath_changed_handler, param_get_string, &fwpath,
                     S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
@@ -18013,4 +17992,4 @@ module_param(enable_11d, int,
              S_IRUSR | S_IRGRP | S_IROTH);
 
 module_param(country_code, charp,
-             S_IRUSR | S_IRGRP | S_IROTH);
+S_IRUSR | S_IRGRP | S_IROTH);
